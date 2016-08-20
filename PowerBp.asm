@@ -116,6 +116,11 @@ Flush:
 		; comporator
 		ldi temp, 0b00001010	; 1 -> 0
 		out ACSR, temp
+
+		ldi temp, 0b00000000
+		out ADMUX, temp
+		ldi temp, 0b10100111
+		out ADCSR, temp
 		
 		rcall prButton3Load
 		rcall prButton2Load
