@@ -14,6 +14,7 @@
   <FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE>
   <FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE>
   <FILE>C:\AVR\AVR\PowerBp\Display.asm</FILE>
+  <FILE>C:\AVR\AVR\PowerBp\Eeprom.asm</FILE>
   <FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE>
   <FILE>C:\AVR\AVR\PowerBp\SmallPwm.asm</FILE>
   <FILE>C:\AVR\AVR\PowerBp\BlinkDisplay.asm</FILE>
@@ -32,20 +33,12 @@
   <FILE>C:\AVR\AVR\PowerBp\PowerBp.map</FILE>
  </OUTPUT_FILES>
  <LABELS>
-  <Reset><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>56</LINE></Reset>
-  <INT_0><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>30</LINE></INT_0>
-  <INT_1><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>31</LINE></INT_1>
-  <Timer1_capt1><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>32</LINE></Timer1_capt1>
+  <RESET><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>56</LINE></RESET>
+  <TIM1_COMPA><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>50</LINE></TIM1_COMPA>
+  <TIM0_OVF><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>53</LINE></TIM0_OVF>
   <ANA_COMP><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>39</LINE></ANA_COMP>
-  <Timer1_OVF1><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>36</LINE></Timer1_OVF1>
-  <TIMER1_OC1A><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>50</LINE></TIMER1_OC1A>
-  <UART_RX><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>37</LINE></UART_RX>
-  <TIMER1_OVER><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>34</LINE></TIMER1_OVER>
-  <TIMER0_OVER><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>53</LINE></TIMER0_OVER>
-  <Timer1_comp1><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>33</LINE></Timer1_comp1>
-  <Timer0_OVF0><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>35</LINE></Timer0_OVF0>
   <prSmallPwmUnload><FILE>C:\AVR\AVR\PowerBp\SmallPwm.asm</FILE><LINE>15</LINE></prSmallPwmUnload>
-  <varPowerOff><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>155</LINE></varPowerOff>
+  <ShortCircuitHandle><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1032</LINE></ShortCircuitHandle>
   <EnRun10Hz><FILE>C:\AVR\AVR\PowerBp\Controller.asm</FILE><LINE>33</LINE></EnRun10Hz>
   <EnRun><FILE>C:\AVR\AVR\PowerBp\Controller.asm</FILE><LINE>21</LINE></EnRun>
   <RAM_Flush><FILE>C:\AVR\AVR\PowerBp\PowerBp.asm</FILE><LINE>58</LINE></RAM_Flush>
@@ -56,7 +49,7 @@
   <prButton1Load><FILE>C:\AVR\AVR\PowerBp\Button1.asm</FILE><LINE>8</LINE></prButton1Load>
   <prDisplayLoad><FILE>C:\AVR\AVR\PowerBp\Display.asm</FILE><LINE>9</LINE></prDisplayLoad>
   <prRealClockLoad><FILE>C:\AVR\AVR\PowerBp\RealClock.asm</FILE><LINE>8</LINE></prRealClockLoad>
-  <prBuzzerLoad><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>5</LINE></prBuzzerLoad>
+  <varPowerOff><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>155</LINE></varPowerOff>
   <Run><FILE>C:\AVR\AVR\PowerBp\Controller.asm</FILE><LINE>1</LINE></Run>
   <varBeginRunSystem><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>2</LINE></varBeginRunSystem>
   <varBeginRunSystem2><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>3</LINE></varBeginRunSystem2>
@@ -194,11 +187,17 @@
   <varTimerMinDump><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>170</LINE></varTimerMinDump>
   <varTimerHourDump><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>171</LINE></varTimerHourDump>
   <varTimerOnOffDump><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>172</LINE></varTimerOnOffDump>
-  <varBuzzerSystem><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>174</LINE></varBuzzerSystem>
-  <varBuzzerStTime0><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>175</LINE></varBuzzerStTime0>
-  <varBuzzerStTime1><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>176</LINE></varBuzzerStTime1>
-  <varBuzzerCurTime0><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>177</LINE></varBuzzerCurTime0>
-  <varBuzzerCurTime1><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>178</LINE></varBuzzerCurTime1>
+  <varBuzzerSystem><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>175</LINE></varBuzzerSystem>
+  <varBuzzerStTime0><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>176</LINE></varBuzzerStTime0>
+  <varBuzzerStTime1><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>177</LINE></varBuzzerStTime1>
+  <varBuzzerCurTime0><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>178</LINE></varBuzzerCurTime0>
+  <varBuzzerCurTime1><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>179</LINE></varBuzzerCurTime1>
+  <varBuzzerDurationCurTime0><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>180</LINE></varBuzzerDurationCurTime0>
+  <varBuzzerDurationCurTime1><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>181</LINE></varBuzzerDurationCurTime1>
+  <varBuzzerDurationCurTime2><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>182</LINE></varBuzzerDurationCurTime2>
+  <varBuzzerDurationEndTime0><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>183</LINE></varBuzzerDurationEndTime0>
+  <varBuzzerDurationEndTime1><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>184</LINE></varBuzzerDurationEndTime1>
+  <varBuzzerDurationEndTime2><FILE>C:\AVR\AVR\PowerBp\SramVar.asm</FILE><LINE>185</LINE></varBuzzerDurationEndTime2>
   <prButton1Init><FILE>C:\AVR\AVR\PowerBp\Button1.asm</FILE><LINE>2</LINE></prButton1Init>
   <prButton1IsLoad><FILE>C:\AVR\AVR\PowerBp\Button1.asm</FILE><LINE>5</LINE></prButton1IsLoad>
   <prButton1Inc><FILE>C:\AVR\AVR\PowerBp\Button1.asm</FILE><LINE>11</LINE></prButton1Inc>
@@ -299,9 +298,9 @@
   <incRealTimeMin><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>833</LINE></incRealTimeMin>
   <incRealTimeHour><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>843</LINE></incRealTimeHour>
   <incPrOnOff><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>627</LINE></incPrOnOff>
-  <incClockDisableMin><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1252</LINE></incClockDisableMin>
+  <incClockDisableMin><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1003</LINE></incClockDisableMin>
   <pp01><FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE><LINE>481</LINE></pp01>
-  <incClockDisableHour><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1240</LINE></incClockDisableHour>
+  <incClockDisableHour><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>991</LINE></incClockDisableHour>
   <pr80Next0><FILE>C:\AVR\AVR\PowerBp\Button1.asm</FILE><LINE>348</LINE></pr80Next0>
   <showMemoryPower><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>937</LINE></showMemoryPower>
   <pr70Next0><FILE>C:\AVR\AVR\PowerBp\Button1.asm</FILE><LINE>359</LINE></pr70Next0>
@@ -376,7 +375,7 @@
   <ppr29><FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE><LINE>244</LINE></ppr29>
   <ppr41><FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE><LINE>451</LINE></ppr41>
   <ppr42><FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE><LINE>443</LINE></ppr42>
-  <returnMainMenu><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1264</LINE></returnMainMenu>
+  <returnMainMenu><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1015</LINE></returnMainMenu>
   <ppr50><FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE><LINE>423</LINE></ppr50>
   <ppr51><FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE><LINE>414</LINE></ppr51>
   <ppr52><FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE><LINE>405</LINE></ppr52>
@@ -400,12 +399,12 @@
   <ppr111><FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE><LINE>318</LINE></ppr111>
   <ppr120><FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE><LINE>326</LINE></ppr120>
   <ppr121><FILE>C:\AVR\AVR\PowerBp\Button2.asm</FILE><LINE>337</LINE></ppr121>
-  <loadPowerSetting><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>959</LINE></loadPowerSetting>
-  <showClockDisableHour><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1209</LINE></showClockDisableHour>
-  <showClockDisableMin><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1225</LINE></showClockDisableMin>
+  <loadPowerSetting><FILE>C:\AVR\AVR\PowerBp\Eeprom.asm</FILE><LINE>3</LINE></loadPowerSetting>
+  <showClockDisableHour><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>960</LINE></showClockDisableHour>
+  <showClockDisableMin><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>976</LINE></showClockDisableMin>
   <prBlinkDisplayLoad><FILE>C:\AVR\AVR\PowerBp\BlinkDisplay.asm</FILE><LINE>7</LINE></prBlinkDisplayLoad>
   <prBlinkDisplayUnLoad><FILE>C:\AVR\AVR\PowerBp\BlinkDisplay.asm</FILE><LINE>16</LINE></prBlinkDisplayUnLoad>
-  <savePowerSetting><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1080</LINE></savePowerSetting>
+  <savePowerSetting><FILE>C:\AVR\AVR\PowerBp\Eeprom.asm</FILE><LINE>109</LINE></savePowerSetting>
   <prButton3Init><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>2</LINE></prButton3Init>
   <prButton3IsLoad><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>5</LINE></prButton3IsLoad>
   <prButton3Inc><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>11</LINE></prButton3Inc>
@@ -413,32 +412,36 @@
   <prButton3Func><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>18</LINE></prButton3Func>
   <prButton3Exit0><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>21</LINE></prButton3Exit0>
   <prButton3FuncBeggin><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>23</LINE></prButton3FuncBeggin>
-  <prButton3Exit><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>184</LINE></prButton3Exit>
+  <prButton3Exit><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>202</LINE></prButton3Exit>
   <prButton3Press><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>36</LINE></prButton3Press>
   <prButton3UnPress><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>44</LINE></prButton3UnPress>
   <button3Start><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>50</LINE></button3Start>
-  <p3_1><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>78</LINE></p3_1>
-  <p3_3><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>80</LINE></p3_3>
-  <p3_41><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>82</LINE></p3_41>
-  <p3_50><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>84</LINE></p3_50>
-  <p3_51><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>86</LINE></p3_51>
-  <p3_52><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>88</LINE></p3_52>
-  <p3_53><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>90</LINE></p3_53>
-  <p3_54><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>92</LINE></p3_54>
-  <p3_130><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>94</LINE></p3_130>
-  <p3_131><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>96</LINE></p3_131>
-  <p3_01><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>181</LINE></p3_01>
-  <pr3_1><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>99</LINE></pr3_1>
-  <pr3_3><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>107</LINE></pr3_3>
-  <pr3_41><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>133</LINE></pr3_41>
-  <pr3_50><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>141</LINE></pr3_50>
-  <pr3_51><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>149</LINE></pr3_51>
-  <pr3_52><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>157</LINE></pr3_52>
-  <pr3_53><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>165</LINE></pr3_53>
-  <pr3_54><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>173</LINE></pr3_54>
-  <pr3_130><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>115</LINE></pr3_130>
-  <pr3_131><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>123</LINE></pr3_131>
-  <onOffPower><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1270</LINE></onOffPower>
+  <p3_1><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>80</LINE></p3_1>
+  <p3_3><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>82</LINE></p3_3>
+  <p3_41><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>84</LINE></p3_41>
+  <p3_50><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>86</LINE></p3_50>
+  <p3_51><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>88</LINE></p3_51>
+  <p3_52><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>90</LINE></p3_52>
+  <p3_53><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>92</LINE></p3_53>
+  <p3_54><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>94</LINE></p3_54>
+  <p3_130><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>96</LINE></p3_130>
+  <p3_131><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>98</LINE></p3_131>
+  <p3_255><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>100</LINE></p3_255>
+  <p3_01><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>199</LINE></p3_01>
+  <pr3_1><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>103</LINE></pr3_1>
+  <pr3_3><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>111</LINE></pr3_3>
+  <pr3_41><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>137</LINE></pr3_41>
+  <pr3_50><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>145</LINE></pr3_50>
+  <pr3_51><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>153</LINE></pr3_51>
+  <pr3_52><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>161</LINE></pr3_52>
+  <pr3_53><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>169</LINE></pr3_53>
+  <pr3_54><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>177</LINE></pr3_54>
+  <pr3_130><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>119</LINE></pr3_130>
+  <pr3_131><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>127</LINE></pr3_131>
+  <pr3_255><FILE>C:\AVR\AVR\PowerBp\Button3.asm</FILE><LINE>185</LINE></pr3_255>
+  <onOffPower><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1021</LINE></onOffPower>
+  <prBuzzerUnload><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>17</LINE></prBuzzerUnload>
+  <powerOn><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>816</LINE></powerOn>
   <prDisplayInit><FILE>C:\AVR\AVR\PowerBp\Display.asm</FILE><LINE>2</LINE></prDisplayInit>
   <prDisplayIsLoad><FILE>C:\AVR\AVR\PowerBp\Display.asm</FILE><LINE>4</LINE></prDisplayIsLoad>
   <prDisplayInc><FILE>C:\AVR\AVR\PowerBp\Display.asm</FILE><LINE>12</LINE></prDisplayInc>
@@ -453,6 +456,10 @@
   <s3><FILE>C:\AVR\AVR\PowerBp\Display.asm</FILE><LINE>56</LINE></s3>
   <s4><FILE>C:\AVR\AVR\PowerBp\Display.asm</FILE><LINE>61</LINE></s4>
   <outPortB><FILE>C:\AVR\AVR\PowerBp\Display.asm</FILE><LINE>67</LINE></outPortB>
+  <EERead><FILE>C:\AVR\AVR\PowerBp\Eeprom.asm</FILE><LINE>241</LINE></EERead>
+  <LoadNextSegment><FILE>C:\AVR\AVR\PowerBp\Eeprom.asm</FILE><LINE>213</LINE></LoadNextSegment>
+  <EEWrite><FILE>C:\AVR\AVR\PowerBp\Eeprom.asm</FILE><LINE>226</LINE></EEWrite>
+  <WriteNextSegment><FILE>C:\AVR\AVR\PowerBp\Eeprom.asm</FILE><LINE>219</LINE></WriteNextSegment>
   <toDigit><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>2</LINE></toDigit>
   <toDigitLOOP1><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>8</LINE></toDigitLOOP1>
   <toDigitLOOP2><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>18</LINE></toDigitLOOP2>
@@ -536,12 +543,12 @@
   <incRealClockRet><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>751</LINE></incRealClockRet>
   <incRealClockNext1><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>736</LINE></incRealClockNext1>
   <incRealClockRetAlarm><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>749</LINE></incRealClockRetAlarm>
+  <giveShortSignal><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1061</LINE></giveShortSignal>
   <incRealClockNext2><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>746</LINE></incRealClockNext2>
   <checkAlarmRealClock><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>754</LINE></checkAlarmRealClock>
   <checkAlarmRealClockOff><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>786</LINE></checkAlarmRealClockOff>
   <checkAlarmRealClockOn1><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>758</LINE></checkAlarmRealClockOn1>
   <checkAlarmRealClockOn2><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>772</LINE></checkAlarmRealClockOn2>
-  <powerOn><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>816</LINE></powerOn>
   <checkAlarmRealClockRet><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>813</LINE></checkAlarmRealClockRet>
   <checkAlarmRealClockOff2><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>800</LINE></checkAlarmRealClockOff2>
   <powerOff><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>823</LINE></powerOff>
@@ -555,14 +562,13 @@
   <Show2DigitTime><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>905</LINE></Show2DigitTime>
   <updateClock><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>892</LINE></updateClock>
   <showClockNext0><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>899</LINE></showClockNext0>
-  <EERead><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1199</LINE></EERead>
-  <EEWrite><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1184</LINE></EEWrite>
-  <incClockDisableHourNULL><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1245</LINE></incClockDisableHourNULL>
-  <incClockDisableHourRet><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1247</LINE></incClockDisableHourRet>
-  <incClockDisableMinNULL><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1257</LINE></incClockDisableMinNULL>
-  <incClockDisableMinRet><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1259</LINE></incClockDisableMinRet>
-  <onOffPowerOFF><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1277</LINE></onOffPowerOFF>
-  <onOffPowerOn><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1274</LINE></onOffPowerOn>
+  <incClockDisableHourNULL><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>996</LINE></incClockDisableHourNULL>
+  <incClockDisableHourRet><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>998</LINE></incClockDisableHourRet>
+  <incClockDisableMinNULL><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1008</LINE></incClockDisableMinNULL>
+  <incClockDisableMinRet><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1010</LINE></incClockDisableMinRet>
+  <onOffPowerOFF><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1028</LINE></onOffPowerOFF>
+  <onOffPowerOn><FILE>C:\AVR\AVR\PowerBp\Function.asm</FILE><LINE>1025</LINE></onOffPowerOn>
+  <prBuzzerLoad><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>8</LINE></prBuzzerLoad>
   <prSmallPwmInit><FILE>C:\AVR\AVR\PowerBp\SmallPwm.asm</FILE><LINE>2</LINE></prSmallPwmInit>
   <prSmallPwmInc><FILE>C:\AVR\AVR\PowerBp\SmallPwm.asm</FILE><LINE>9</LINE></prSmallPwmInc>
   <prSmallPwmTimeCheck><FILE>C:\AVR\AVR\PowerBp\SmallPwm.asm</FILE><LINE>12</LINE></prSmallPwmTimeCheck>
@@ -595,12 +601,15 @@
   <Fuc_All><FILE>C:\AVR\AVR\PowerBp\Controller.asm</FILE><LINE>68</LINE></Fuc_All>
   <UnRun><FILE>C:\AVR\AVR\PowerBp\Controller.asm</FILE><LINE>28</LINE></UnRun>
   <UnRun10Hz><FILE>C:\AVR\AVR\PowerBp\Controller.asm</FILE><LINE>40</LINE></UnRun10Hz>
-  <prBuzzerInc><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>8</LINE></prBuzzerInc>
-  <prBuzzerTimeCheck><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>11</LINE></prBuzzerTimeCheck>
-  <prBuzzerFunc><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>18</LINE></prBuzzerFunc>
+  <prBuzzerInc><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>11</LINE></prBuzzerInc>
+  <prBuzzerTimeCheck><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>14</LINE></prBuzzerTimeCheck>
+  <prBuzzerFunc><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>26</LINE></prBuzzerFunc>
   <prBuzzerInit><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>2</LINE></prBuzzerInit>
-  <prBuzzerUnload><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>14</LINE></prBuzzerUnload>
-  <prBuzzerFuncRet><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>31</LINE></prBuzzerFuncRet>
-  <prBuzzerFuncLowLevel><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>29</LINE></prBuzzerFuncLowLevel>
+  <prBuzzerIsLoad><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>5</LINE></prBuzzerIsLoad>
+  <prBuzzerFuncEt><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>69</LINE></prBuzzerFuncEt>
+  <prBuzzerFuncLowLevel><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>41</LINE></prBuzzerFuncLowLevel>
+  <IncBuzzerDuration><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>44</LINE></IncBuzzerDuration>
+  <CheckBuzzerDuration><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>56</LINE></CheckBuzzerDuration>
+  <StopBuzzer><FILE>C:\AVR\AVR\PowerBp\Buzzer.asm</FILE><LINE>67</LINE></StopBuzzer>
  </LABELS>
 </ASSEMBLER_INFO>

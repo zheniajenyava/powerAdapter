@@ -72,6 +72,8 @@ button3Start:
 		breq p3_130
 		cpi temp, 131
 		breq p3_131
+		cpi temp, 255
+		breq p3_255
 
 		rjmp p3_01
 
@@ -95,6 +97,8 @@ p3_130:
 		rjmp pr3_130
 p3_131:
 		rjmp pr3_131
+p3_255:
+		rjmp pr3_255
 
 pr3_1:
 		ldi temp, 130
@@ -177,6 +181,20 @@ pr3_54:
 		rcall updateSmallPwmStatus
 		rcall showProcessStTimeOff		
 		rjmp p3_01
+
+pr3_255:
+		sei
+		; comporator		
+		ldi temp, 0b00011000
+		out ACSR, temp
+		rcall Pause
+		cli
+		rcall prBuzzerUnload
+		rcall powerOn
+		ldi temp, 1
+		sts positionMenu, temp
+		rcall prRealClockLoad
+		rjmp p3_01		
 
 p3_01:
 		reti

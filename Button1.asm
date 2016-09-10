@@ -33,7 +33,6 @@ prButton1FuncBeggin:
 		breq prButton1Press
 		rjmp prButton1UnPress
 
-; todo Реализовать через относительные переходы
 prButton1Press:
 		SBIC PINB,4
 		rjmp prButton1Exit

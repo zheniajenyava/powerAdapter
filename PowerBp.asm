@@ -16,41 +16,41 @@
 .def servprTemp7 = R29
 .cseg
 .org 0
-		rjmp Reset
-		rjmp INT_0
-		rjmp INT_1
-		rjmp Timer1_capt1
-		rjmp ANA_COMP
-		rjmp Timer1_OVF1
-		rjmp TIMER1_OC1A
-		rjmp UART_RX
-		rjmp TIMER1_OVER
-		rjmp TIMER0_OVER
-		rjmp ANA_COMP
-INT_0:
-INT_1:
-Timer1_capt1:
-Timer1_comp1:
-TIMER1_OVER:
-Timer0_OVF0:
-Timer1_OVF1:
-UART_RX:
-		reti
-ANA_COMP:
-		cbi PORTB, 3
+		rjmp RESET ; Reset Handler
+		reti ;rjmp EXT_INT0 ; IRQ0 Handler
+		reti ;rjmp EXT_INT1 ; IRQ1 Handler
+		reti ;rjmp TIM2_COMP ; Timer2 Compare Handler
+		reti ;rjmp TIM2_OVF ; Timer2 Overflow Handler
+		reti ;rjmp TIM1_CAPT ; Timer1 Capture Handler
+		rjmp TIM1_COMPA ; Timer1 CompareA Handler
+		reti ;rjmp TIM1_COMPB ; Timer1 CompareB Handler
+		reti ;rjmp TIM1_OVF ; Timer1 Overflow Handler
+		rjmp TIM0_OVF ; Timer0 Overflow Handler
+		reti ;rjmp SPI_STC ; SPI Transfer Complete Handler
+		reti ;rjmp USART_RXC ; USART RX Complete Handler
+		reti ;rjmp USART_UDRE ; UDR Empty Handler
+		reti ;rjmp USART_TXC ; USART TX Complete Handler
+		reti ;rjmp ADC ; ADC Conversion Complete Handler
+		reti ;rjmp EE_RDY ; EEPROM Ready Handler
+		rjmp ANA_COMP ; Analog Comparator Handler
+		reti ;rjmp TWSI ; Two-wire Serial Interface Handler
+		reti ;rjmp SPM_RDY ; Store Program Memory Ready Handler	
+			
+ANA_COMP:		
+		cbi PORTB, 3		
 		clr temp
 		out TCCR2, temp
 		cbi PORTB, 3
 		out TCNT2, temp
 		rcall prSmallPwmUnload
 		cbi PORTB, 3
-		sts varPowerOff, temp
-
+		rcall ShortCircuitHandle
 		reti
-TIMER1_OC1A:
+
+TIM1_COMPA:
 		rcall EnRun10Hz	
 		reti
-TIMER0_OVER:
+TIM0_OVF:
 		rcall EnRun
 		reti
 RESET:
@@ -114,20 +114,16 @@ Flush:
 		out PORTC,  temp		
 
 		; comporator
-		ldi temp, 0b00001010	; 1 -> 0
+		ldi temp, 0b00001000
 		out ACSR, temp
-
-		ldi temp, 0b00000000
-		out ADMUX, temp
-		ldi temp, 0b10100111
-		out ADCSR, temp
 		
 		rcall prButton3Load
 		rcall prButton2Load
 		rcall prButton1Load
 		rcall prDisplayLoad
 		rcall prRealClockLoad
-		rcall prBuzzerLoad
+;		rcall prBuzzerLoad
+		
 		sei
 		ldi temp, 1
 		sts varPowerOff, temp
@@ -138,6 +134,7 @@ Flush:
 .include "Button2.asm"
 .include "Button3.asm"
 .include "Display.asm"
+.include "Eeprom.asm"
 .include "Function.asm"
 .include "SmallPwm.asm"
 .include "BlinkDisplay.asm"

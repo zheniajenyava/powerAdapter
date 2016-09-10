@@ -734,12 +734,12 @@ incRealClockNext0:
 		sts varRealTimeClockMin, temp		
 		rjmp incRealClockRetAlarm
 incRealClockNext1:
+		rcall giveShortSignal
 		clr temp
 		sts varRealTimeClockMin, temp
 		lds temp, varRealTimeClockHour
 		inc temp
 		cpi temp, 24
-
 		breq incRealClockNext2
 		sts varRealTimeClockHour, temp
 		rjmp incRealClockRetAlarm
@@ -956,255 +956,6 @@ showMemoryPower:
 
 		ret
 
-loadPowerSetting:
-		cli
-		lds R20,varUniversalShowMemoryPower		
-		ldi prTemp0, 1
-		ldi prTemp1, 50
-		ldi prTemp2, 0
-		mul R20, prTemp1
-
-		rcall EERead
-		sts varPwmDeep,temp		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varPwmONDel,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varPwmONOFF,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varSmallPwmSystem,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varSmallPwmStTime0,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varSmallPwmStTime1,temp
-	
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varSmallPwmStTime2,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varSmallPwmOff,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varSmallPwmOn,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varSmallPwmOnOff,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varSmallPwmCurOnOff,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varSmallPwmState,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varTimerSec,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varTimerMin,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varTimerHour,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varTimerOnOff,temp
-		
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varClockSec,temp	
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varClockMin,temp
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		rcall EERead
-		sts varClockHour,temp
-			
-		rcall powerStatusUpdate	
-		rcall updateSmallPwmStatus
-
-		ret
-
-savePowerSetting:		
-		cli
-		lds R20,varUniversalShowMemoryPower		
-		ldi prTemp0, 1
-		ldi prTemp1, 50
-		ldi prTemp2, 0
-		mul R20, prTemp1		
-
-		
-		lds temp,varPwmDeep
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varPwmONDel
-		rcall EEWrite	
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varPwmONOFF
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varSmallPwmSystem
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varSmallPwmStTime0
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varSmallPwmStTime1
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varSmallPwmStTime2
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varSmallPwmOff
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varSmallPwmOn
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varSmallPwmOnOff
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varSmallPwmCurOnOff
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varSmallPwmState
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varTimerSec
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varTimerMin
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varTimerHour
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varTimerOnOff
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varClockSec
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varClockMin
-		rcall EEWrite
-
-		add R0, prTemp0
-		adc R1, prTemp2
-		lds temp,varClockHour
-		rcall EEWrite
-						
-		ret
-
-EEWrite:	
-		sbic EECR,EEWE
-		rjmp EEWrite
- 
-		cli
-		out	EEARL,R0
-		out	EEARH,R1
-		out	EEDR,temp
- 
-		sbi	EECR,EEMWE
-		sbi	EECR,EEWE
- 
-		sei
-		ret
-
-EERead:	
-		sbic EECR,EEWE
-		rjmp EERead
-		out	EEARL, R0
-		out	EEARH, R1
-		sbi	EECR,EERE
-		in temp, EEDR
-		ret
-
 
 showClockDisableHour:
 		clr R21
@@ -1276,4 +1027,40 @@ onOffPowerOn:
 		ret
 onOffPowerOFF:
 		rcall powerOff
+		ret
+
+ShortCircuitHandle:
+		clr temp
+		sts varPowerOff, temp		
+		ldi temp, 0b00000000
+		out ACSR, temp
+		ldi temp, 255
+		sts positionMenu, temp
+		ldi temp, 21
+		sts varBuzzerDurationEndTime0, temp
+		sts varBuzzerDurationEndTime1, temp
+		rcall prBuzzerLoad
+		rcall prBlinkDisplayUnload
+		rcall prRealClockUnload
+		rcall prClockUnload
+		
+		clr prTemp0
+		ldi prTemp1, 0b00000001
+
+		sts varProcessDataDigit1D, prTemp0
+		sts varProcessDataDigit1B, prTemp1		
+		sts varProcessDataDigit2D, prTemp0
+		sts varProcessDataDigit2B, prTemp1
+		sts varProcessDataDigit3D, prTemp0
+		sts varProcessDataDigit3B, prTemp1
+		sts varProcessDataDigit4D, prTemp0		
+		sts varProcessDataDigit4B, prTemp1
+
+		ret
+
+giveShortSignal:
+		ldi temp, 2
+		sts varBuzzerDurationEndTime0, temp
+		sts varBuzzerDurationEndTime1, temp
+		rcall prBuzzerLoad		
 		ret

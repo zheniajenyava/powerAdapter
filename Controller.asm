@@ -65,7 +65,7 @@ Check_All:
 		rcall prRealClockTimeCheck
 		rcall prBuzzerTimeCheck
 		ret
-Fuc_All:
+Fuc_All:		
 		rcall prDisplayFunc
 		rcall prButton1Func
 		rcall prButton2Func
@@ -74,6 +74,6 @@ Fuc_All:
 		rcall prBlinkDisplayFunc
 		rcall prClockFunc
 		rcall prRealClockFunc
-		rcall prBuzzerFunc
+		rcall prBuzzerFunc		
 		ret
 

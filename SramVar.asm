@@ -171,8 +171,15 @@ varTimerMinDump: .byte 1
 varTimerHourDump: .byte 1
 varTimerOnOffDump: .byte 1
 
+
 varBuzzerSystem: .byte 1
 varBuzzerStTime0: .byte 1
 varBuzzerStTime1: .byte 1
 varBuzzerCurTime0: .byte 1
 varBuzzerCurTime1: .byte 1
+varBuzzerDurationCurTime0: .byte 1
+varBuzzerDurationCurTime1: .byte 1
+varBuzzerDurationCurTime2: .byte 1
+varBuzzerDurationEndTime0: .byte 1
+varBuzzerDurationEndTime1: .byte 1
+varBuzzerDurationEndTime2: .byte 1
