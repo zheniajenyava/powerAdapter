@@ -215,7 +215,7 @@
   <prButton1Func><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>18</LINE></prButton1Func>
   <prButton1Exit0><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>21</LINE></prButton1Exit0>
   <prButton1FuncBeggin><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>23</LINE></prButton1FuncBeggin>
-  <prButton1Exit><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>669</LINE></prButton1Exit>
+  <prButton1Exit><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>676</LINE></prButton1Exit>
   <prButton1Press><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>36</LINE></prButton1Press>
   <prButton1UnPress><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>44</LINE></prButton1UnPress>
   <button1Start><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>50</LINE></button1Start>
@@ -226,113 +226,115 @@
   <p4><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>89</LINE></p4>
   <p02><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>93</LINE></p02>
   <prClockUnLoad><FILE>C:\Users\user\Project\PowerBp\Clock.asm</FILE><LINE>17</LINE></prClockUnLoad>
-  <p01><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>661</LINE></p01>
+  <p01><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>668</LINE></p01>
   <prRealClockUnLoad><FILE>C:\Users\user\Project\PowerBp\RealClock.asm</FILE><LINE>17</LINE></prRealClockUnLoad>
   <prClockLoad><FILE>C:\Users\user\Project\PowerBp\Clock.asm</FILE><LINE>8</LINE></prClockLoad>
   <showOnOff><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>320</LINE></showOnOff>
-  <p21><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>156</LINE></p21>
-  <p22><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>158</LINE></p22>
-  <p23><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>160</LINE></p23>
-  <p24><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>162</LINE></p24>
-  <p25><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>164</LINE></p25>
-  <p26><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>166</LINE></p26>
-  <p27><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>168</LINE></p27>
-  <p28><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>170</LINE></p28>
-  <p29><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>172</LINE></p29>
-  <p41><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>174</LINE></p41>
-  <p42><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>176</LINE></p42>
-  <p43><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>178</LINE></p43>
-  <p50><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>180</LINE></p50>
-  <p51><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>182</LINE></p51>
-  <p52><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>184</LINE></p52>
-  <p53><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>186</LINE></p53>
-  <p54><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>188</LINE></p54>
-  <p55><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>190</LINE></p55>
-  <p60><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>192</LINE></p60>
-  <p61><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>194</LINE></p61>
-  <p62><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>196</LINE></p62>
-  <p70><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>198</LINE></p70>
-  <p80><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>200</LINE></p80>
-  <p90><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>202</LINE></p90>
-  <p91><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>204</LINE></p91>
-  <p92><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>206</LINE></p92>
-  <p100><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>208</LINE></p100>
-  <p101><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>210</LINE></p101>
-  <p102><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>212</LINE></p102>
-  <p110><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>214</LINE></p110>
-  <pNextPart><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>218</LINE></pNextPart>
-  <pr21><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>469</LINE></pr21>
-  <pr22><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>482</LINE></pr22>
-  <pr23><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>504</LINE></pr23>
-  <pr24><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>528</LINE></pr24>
-  <pr25><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>635</LINE></pr25>
-  <pr26><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>609</LINE></pr26>
-  <pr27><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>583</LINE></pr27>
-  <pr28><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>556</LINE></pr28>
-  <pr29><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>467</LINE></pr29>
-  <pr41><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>460</LINE></pr41>
-  <pr42><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>447</LINE></pr42>
-  <pr43><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>432</LINE></pr43>
-  <pr50><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>425</LINE></pr50>
-  <pr51><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>418</LINE></pr51>
-  <pr52><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>411</LINE></pr52>
-  <pr53><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>404</LINE></pr53>
-  <pr54><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>396</LINE></pr54>
-  <pr55><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>382</LINE></pr55>
-  <pr60><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>377</LINE></pr60>
-  <pr61><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>372</LINE></pr61>
-  <pr62><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>364</LINE></pr62>
-  <pr70><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>353</LINE></pr70>
-  <pr80><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>342</LINE></pr80>
-  <pr90><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>276</LINE></pr90>
-  <pr91><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>270</LINE></pr91>
-  <pr92><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>262</LINE></pr92>
-  <pr100><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>282</LINE></pr100>
-  <pr101><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>288</LINE></pr101>
-  <pr102><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>294</LINE></pr102>
-  <pr110><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>302</LINE></pr110>
-  <p111><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>236</LINE></p111>
-  <p112><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>238</LINE></p112>
-  <p120><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>240</LINE></p120>
-  <p121><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>242</LINE></p121>
-  <p122><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>244</LINE></p122>
-  <p130><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>246</LINE></p130>
-  <p131><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>248</LINE></p131>
-  <pr111><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>308</LINE></pr111>
-  <pr112><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>314</LINE></pr112>
-  <pr120><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>322</LINE></pr120>
-  <pr121><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>328</LINE></pr121>
-  <pr122><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>334</LINE></pr122>
-  <pr130><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>257</LINE></pr130>
-  <pr131><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>253</LINE></pr131>
+  <p21><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>158</LINE></p21>
+  <p22><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>160</LINE></p22>
+  <p23><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>162</LINE></p23>
+  <p24><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>164</LINE></p24>
+  <p25><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>166</LINE></p25>
+  <p26><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>168</LINE></p26>
+  <p27><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>170</LINE></p27>
+  <p28><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>172</LINE></p28>
+  <p29><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>174</LINE></p29>
+  <p30><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>176</LINE></p30>
+  <p41><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>178</LINE></p41>
+  <p42><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>180</LINE></p42>
+  <p43><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>182</LINE></p43>
+  <p50><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>184</LINE></p50>
+  <p51><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>186</LINE></p51>
+  <p52><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>188</LINE></p52>
+  <p53><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>190</LINE></p53>
+  <p54><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>192</LINE></p54>
+  <p55><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>194</LINE></p55>
+  <p60><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>196</LINE></p60>
+  <p61><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>198</LINE></p61>
+  <p62><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>200</LINE></p62>
+  <p70><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>202</LINE></p70>
+  <p80><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>204</LINE></p80>
+  <p90><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>206</LINE></p90>
+  <p91><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>208</LINE></p91>
+  <p92><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>210</LINE></p92>
+  <p100><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>212</LINE></p100>
+  <p101><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>214</LINE></p101>
+  <p102><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>216</LINE></p102>
+  <p110><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>218</LINE></p110>
+  <pNextPart><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>222</LINE></pNextPart>
+  <pr21><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>476</LINE></pr21>
+  <pr22><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>489</LINE></pr22>
+  <pr23><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>511</LINE></pr23>
+  <pr24><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>535</LINE></pr24>
+  <pr25><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>642</LINE></pr25>
+  <pr26><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>616</LINE></pr26>
+  <pr27><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>590</LINE></pr27>
+  <pr28><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>563</LINE></pr28>
+  <pr29><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>471</LINE></pr29>
+  <pr30><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>474</LINE></pr30>
+  <pr41><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>464</LINE></pr41>
+  <pr42><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>451</LINE></pr42>
+  <pr43><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>436</LINE></pr43>
+  <pr50><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>429</LINE></pr50>
+  <pr51><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>422</LINE></pr51>
+  <pr52><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>415</LINE></pr52>
+  <pr53><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>408</LINE></pr53>
+  <pr54><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>400</LINE></pr54>
+  <pr55><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>386</LINE></pr55>
+  <pr60><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>381</LINE></pr60>
+  <pr61><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>376</LINE></pr61>
+  <pr62><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>368</LINE></pr62>
+  <pr70><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>357</LINE></pr70>
+  <pr80><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>346</LINE></pr80>
+  <pr90><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>280</LINE></pr90>
+  <pr91><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>274</LINE></pr91>
+  <pr92><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>266</LINE></pr92>
+  <pr100><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>286</LINE></pr100>
+  <pr101><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>292</LINE></pr101>
+  <pr102><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>298</LINE></pr102>
+  <pr110><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>306</LINE></pr110>
+  <p111><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>240</LINE></p111>
+  <p112><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>242</LINE></p112>
+  <p120><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>244</LINE></p120>
+  <p121><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>246</LINE></p121>
+  <p122><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>248</LINE></p122>
+  <p130><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>250</LINE></p130>
+  <p131><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>252</LINE></p131>
+  <pr111><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>312</LINE></pr111>
+  <pr112><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>318</LINE></pr112>
+  <pr120><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>326</LINE></pr120>
+  <pr121><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>332</LINE></pr121>
+  <pr122><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>338</LINE></pr122>
+  <pr130><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>261</LINE></pr130>
+  <pr131><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>257</LINE></pr131>
   <incRealTimeMin><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>895</LINE></incRealTimeMin>
   <incRealTimeHour><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>905</LINE></incRealTimeHour>
   <incPrOnOff><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>627</LINE></incPrOnOff>
   <incClockDisableMin><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1065</LINE></incClockDisableMin>
   <pp01><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>481</LINE></pp01>
   <incClockDisableHour><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1053</LINE></incClockDisableHour>
-  <pr80Next0><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>348</LINE></pr80Next0>
+  <pr80Next0><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>352</LINE></pr80Next0>
   <showMemoryPower><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>999</LINE></showMemoryPower>
-  <pr70Next0><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>359</LINE></pr70Next0>
+  <pr70Next0><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>363</LINE></pr70Next0>
   <incPrTimerMin><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>615</LINE></incPrTimerMin>
   <showTimer><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>571</LINE></showTimer>
   <incPrTimerHour><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>603</LINE></incPrTimerHour>
-  <ClearProcessDataOnOff><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>388</LINE></ClearProcessDataOnOff>
-  <NClearProcessDataOnOff><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>390</LINE></NClearProcessDataOnOff>
+  <ClearProcessDataOnOff><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>392</LINE></ClearProcessDataOnOff>
+  <NClearProcessDataOnOff><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>394</LINE></NClearProcessDataOnOff>
   <updateSmallPwmStatus><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>534</LINE></updateSmallPwmStatus>
   <showProcessStTimeOff><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>509</LINE></showProcessStTimeOff>
   <showProcessStTimeOn><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>482</LINE></showProcessStTimeOn>
   <showProcessStTime><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>456</LINE></showProcessStTime>
-  <ClearPwnONOFF><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>438</LINE></ClearPwnONOFF>
-  <NClearPwnONOFF><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>440</LINE></NClearPwnONOFF>
+  <ClearPwnONOFF><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>442</LINE></ClearPwnONOFF>
+  <NClearPwnONOFF><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>444</LINE></NClearPwnONOFF>
   <powerStatusUpdate><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>379</LINE></powerStatusUpdate>
-  <ClearPwnDel><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>453</LINE></ClearPwnDel>
-  <NClearPwnDel><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>455</LINE></NClearPwnDel>
+  <ClearPwnDel><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>457</LINE></ClearPwnDel>
+  <NClearPwnDel><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>459</LINE></NClearPwnDel>
   <showPwnDel><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>101</LINE></showPwnDel>
   <showPwnDeep><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>294</LINE></showPwnDeep>
   <ppr1><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>457</LINE></ppr1>
-  <Pause><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>672</LINE></Pause>
-  <Loop><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>675</LINE></Loop>
+  <Pause><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>679</LINE></Pause>
+  <Loop><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>682</LINE></Loop>
   <prButton2Init><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>2</LINE></prButton2Init>
   <prButton2IsLoad><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>5</LINE></prButton2IsLoad>
   <prButton2Inc><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>11</LINE></prButton2Inc>

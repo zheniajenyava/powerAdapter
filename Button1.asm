@@ -109,6 +109,8 @@ p02:
 		breq p28
 		cpi temp, 29
 		breq p29
+		cpi temp, 30
+		breq p30
 		cpi temp, 41
 		breq p41
 		cpi temp, 42
@@ -171,6 +173,8 @@ p28:
 		rjmp pr28
 p29:
 		rjmp pr29
+p30:
+		rjmp pr30
 p41:
 		rjmp pr41
 p42:
@@ -465,6 +469,12 @@ pr41:
 		rcall powerStatusUpdate
 		rjmp p01
 pr29:
+		ldi temp,30
+		sts positionMenu, temp
+		
+		rjmp p01
+
+pr30:		
 		rjmp ppr1
 pr21:
 		ldi temp,22
