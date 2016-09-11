@@ -141,7 +141,8 @@ varRealClockPortB_3: .byte 1
 varRealClockPortD_3: .byte 1
 
 
-varRealTimeDelimiter10Hz: .byte 1
+varRealTimeDelimiter1000Hz0: .byte 1
+varRealTimeDelimiter1000Hz1: .byte 1
 
 varShow2DigitTimePortB_0: .byte 1
 varShow2DigitTimePortD_0: .byte 1
@@ -183,3 +184,12 @@ varBuzzerDurationCurTime2: .byte 1
 varBuzzerDurationEndTime0: .byte 1
 varBuzzerDurationEndTime1: .byte 1
 varBuzzerDurationEndTime2: .byte 1
+
+varCurSumAdc0: .byte 1
+varCurSumAdc1: .byte 1
+varCurSumAdc2: .byte 1
+varEndSumAdc0: .byte 1
+varEndSumAdc1: .byte 1
+varEndSumAdc2: .byte 1
+varCurrentPower0: .byte 1
+varCurrentPower1: .byte 1

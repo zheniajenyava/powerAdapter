@@ -38,8 +38,8 @@
   <TIM0_OVF><FILE>C:\Users\user\Project\PowerBp\PowerBp.asm</FILE><LINE>53</LINE></TIM0_OVF>
   <ANA_COMP><FILE>C:\Users\user\Project\PowerBp\PowerBp.asm</FILE><LINE>39</LINE></ANA_COMP>
   <prSmallPwmUnload><FILE>C:\Users\user\Project\PowerBp\SmallPwm.asm</FILE><LINE>15</LINE></prSmallPwmUnload>
-  <ShortCircuitHandle><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1029</LINE></ShortCircuitHandle>
-  <EnRun10Hz><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>33</LINE></EnRun10Hz>
+  <ShortCircuitHandle><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1095</LINE></ShortCircuitHandle>
+  <EnRun1000Hz><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>33</LINE></EnRun1000Hz>
   <EnRun><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>21</LINE></EnRun>
   <RAM_Flush><FILE>C:\Users\user\Project\PowerBp\PowerBp.asm</FILE><LINE>58</LINE></RAM_Flush>
   <Flush><FILE>C:\Users\user\Project\PowerBp\PowerBp.asm</FILE><LINE>62</LINE></Flush>
@@ -162,43 +162,52 @@
   <varRealClockPortD_2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>139</LINE></varRealClockPortD_2>
   <varRealClockPortB_3><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>140</LINE></varRealClockPortB_3>
   <varRealClockPortD_3><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>141</LINE></varRealClockPortD_3>
-  <varRealTimeDelimiter10Hz><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>144</LINE></varRealTimeDelimiter10Hz>
-  <varShow2DigitTimePortB_0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>146</LINE></varShow2DigitTimePortB_0>
-  <varShow2DigitTimePortD_0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>147</LINE></varShow2DigitTimePortD_0>
-  <varShow2DigitTimePortB_1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>148</LINE></varShow2DigitTimePortB_1>
-  <varShow2DigitTimePortD_1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>149</LINE></varShow2DigitTimePortD_1>
-  <varShow2DigitTimePortB_2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>150</LINE></varShow2DigitTimePortB_2>
-  <varShow2DigitTimePortD_2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>151</LINE></varShow2DigitTimePortD_2>
-  <varShow2DigitTimePortB_3><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>152</LINE></varShow2DigitTimePortB_3>
-  <varShow2DigitTimePortD_3><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>153</LINE></varShow2DigitTimePortD_3>
-  <varPowerOff><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>155</LINE></varPowerOff>
-  <varPwmDeepDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>157</LINE></varPwmDeepDump>
-  <varPwmONDelDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>158</LINE></varPwmONDelDump>
-  <varPwmONOFFDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>159</LINE></varPwmONOFFDump>
-  <varSmallPwmSystemDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>160</LINE></varSmallPwmSystemDump>
-  <varSmallPwmStTime0Dump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>161</LINE></varSmallPwmStTime0Dump>
-  <varSmallPwmStTime1Dump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>162</LINE></varSmallPwmStTime1Dump>
-  <varSmallPwmStTime2Dump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>163</LINE></varSmallPwmStTime2Dump>
-  <varSmallPwmOffDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>164</LINE></varSmallPwmOffDump>
-  <varSmallPwmOnDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>165</LINE></varSmallPwmOnDump>
-  <varSmallPwmOnOffDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>166</LINE></varSmallPwmOnOffDump>
-  <varSmallPwmCurOnOffDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>167</LINE></varSmallPwmCurOnOffDump>
-  <varSmallPwmStateDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>168</LINE></varSmallPwmStateDump>
-  <varTimerSecDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>169</LINE></varTimerSecDump>
-  <varTimerMinDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>170</LINE></varTimerMinDump>
-  <varTimerHourDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>171</LINE></varTimerHourDump>
-  <varTimerOnOffDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>172</LINE></varTimerOnOffDump>
-  <varBuzzerSystem><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>175</LINE></varBuzzerSystem>
-  <varBuzzerStTime0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>176</LINE></varBuzzerStTime0>
-  <varBuzzerStTime1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>177</LINE></varBuzzerStTime1>
-  <varBuzzerCurTime0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>178</LINE></varBuzzerCurTime0>
-  <varBuzzerCurTime1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>179</LINE></varBuzzerCurTime1>
-  <varBuzzerDurationCurTime0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>180</LINE></varBuzzerDurationCurTime0>
-  <varBuzzerDurationCurTime1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>181</LINE></varBuzzerDurationCurTime1>
-  <varBuzzerDurationCurTime2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>182</LINE></varBuzzerDurationCurTime2>
-  <varBuzzerDurationEndTime0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>183</LINE></varBuzzerDurationEndTime0>
-  <varBuzzerDurationEndTime1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>184</LINE></varBuzzerDurationEndTime1>
-  <varBuzzerDurationEndTime2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>185</LINE></varBuzzerDurationEndTime2>
+  <varRealTimeDelimiter1000Hz0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>144</LINE></varRealTimeDelimiter1000Hz0>
+  <varRealTimeDelimiter1000Hz1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>145</LINE></varRealTimeDelimiter1000Hz1>
+  <varShow2DigitTimePortB_0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>147</LINE></varShow2DigitTimePortB_0>
+  <varShow2DigitTimePortD_0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>148</LINE></varShow2DigitTimePortD_0>
+  <varShow2DigitTimePortB_1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>149</LINE></varShow2DigitTimePortB_1>
+  <varShow2DigitTimePortD_1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>150</LINE></varShow2DigitTimePortD_1>
+  <varShow2DigitTimePortB_2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>151</LINE></varShow2DigitTimePortB_2>
+  <varShow2DigitTimePortD_2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>152</LINE></varShow2DigitTimePortD_2>
+  <varShow2DigitTimePortB_3><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>153</LINE></varShow2DigitTimePortB_3>
+  <varShow2DigitTimePortD_3><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>154</LINE></varShow2DigitTimePortD_3>
+  <varPowerOff><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>156</LINE></varPowerOff>
+  <varPwmDeepDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>158</LINE></varPwmDeepDump>
+  <varPwmONDelDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>159</LINE></varPwmONDelDump>
+  <varPwmONOFFDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>160</LINE></varPwmONOFFDump>
+  <varSmallPwmSystemDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>161</LINE></varSmallPwmSystemDump>
+  <varSmallPwmStTime0Dump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>162</LINE></varSmallPwmStTime0Dump>
+  <varSmallPwmStTime1Dump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>163</LINE></varSmallPwmStTime1Dump>
+  <varSmallPwmStTime2Dump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>164</LINE></varSmallPwmStTime2Dump>
+  <varSmallPwmOffDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>165</LINE></varSmallPwmOffDump>
+  <varSmallPwmOnDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>166</LINE></varSmallPwmOnDump>
+  <varSmallPwmOnOffDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>167</LINE></varSmallPwmOnOffDump>
+  <varSmallPwmCurOnOffDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>168</LINE></varSmallPwmCurOnOffDump>
+  <varSmallPwmStateDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>169</LINE></varSmallPwmStateDump>
+  <varTimerSecDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>170</LINE></varTimerSecDump>
+  <varTimerMinDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>171</LINE></varTimerMinDump>
+  <varTimerHourDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>172</LINE></varTimerHourDump>
+  <varTimerOnOffDump><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>173</LINE></varTimerOnOffDump>
+  <varBuzzerSystem><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>176</LINE></varBuzzerSystem>
+  <varBuzzerStTime0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>177</LINE></varBuzzerStTime0>
+  <varBuzzerStTime1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>178</LINE></varBuzzerStTime1>
+  <varBuzzerCurTime0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>179</LINE></varBuzzerCurTime0>
+  <varBuzzerCurTime1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>180</LINE></varBuzzerCurTime1>
+  <varBuzzerDurationCurTime0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>181</LINE></varBuzzerDurationCurTime0>
+  <varBuzzerDurationCurTime1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>182</LINE></varBuzzerDurationCurTime1>
+  <varBuzzerDurationCurTime2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>183</LINE></varBuzzerDurationCurTime2>
+  <varBuzzerDurationEndTime0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>184</LINE></varBuzzerDurationEndTime0>
+  <varBuzzerDurationEndTime1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>185</LINE></varBuzzerDurationEndTime1>
+  <varBuzzerDurationEndTime2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>186</LINE></varBuzzerDurationEndTime2>
+  <varCurSumAdc0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>188</LINE></varCurSumAdc0>
+  <varCurSumAdc1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>189</LINE></varCurSumAdc1>
+  <varCurSumAdc2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>190</LINE></varCurSumAdc2>
+  <varEndSumAdc0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>191</LINE></varEndSumAdc0>
+  <varEndSumAdc1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>192</LINE></varEndSumAdc1>
+  <varEndSumAdc2><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>193</LINE></varEndSumAdc2>
+  <varCurrentPower0><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>194</LINE></varCurrentPower0>
+  <varCurrentPower1><FILE>C:\Users\user\Project\PowerBp\SramVar.asm</FILE><LINE>195</LINE></varCurrentPower1>
   <prButton1Init><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>2</LINE></prButton1Init>
   <prButton1IsLoad><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>5</LINE></prButton1IsLoad>
   <prButton1Inc><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>11</LINE></prButton1Inc>
@@ -296,14 +305,14 @@
   <pr122><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>334</LINE></pr122>
   <pr130><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>257</LINE></pr130>
   <pr131><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>253</LINE></pr131>
-  <incRealTimeMin><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>829</LINE></incRealTimeMin>
-  <incRealTimeHour><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>839</LINE></incRealTimeHour>
+  <incRealTimeMin><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>895</LINE></incRealTimeMin>
+  <incRealTimeHour><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>905</LINE></incRealTimeHour>
   <incPrOnOff><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>627</LINE></incPrOnOff>
-  <incClockDisableMin><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>999</LINE></incClockDisableMin>
+  <incClockDisableMin><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1065</LINE></incClockDisableMin>
   <pp01><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>481</LINE></pp01>
-  <incClockDisableHour><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>987</LINE></incClockDisableHour>
+  <incClockDisableHour><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1053</LINE></incClockDisableHour>
   <pr80Next0><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>348</LINE></pr80Next0>
-  <showMemoryPower><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>933</LINE></showMemoryPower>
+  <showMemoryPower><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>999</LINE></showMemoryPower>
   <pr70Next0><FILE>C:\Users\user\Project\PowerBp\Button1.asm</FILE><LINE>359</LINE></pr70Next0>
   <incPrTimerMin><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>615</LINE></incPrTimerMin>
   <showTimer><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>571</LINE></showTimer>
@@ -376,7 +385,7 @@
   <ppr29><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>244</LINE></ppr29>
   <ppr41><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>451</LINE></ppr41>
   <ppr42><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>443</LINE></ppr42>
-  <returnMainMenu><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1011</LINE></returnMainMenu>
+  <returnMainMenu><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1077</LINE></returnMainMenu>
   <ppr50><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>423</LINE></ppr50>
   <ppr51><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>414</LINE></ppr51>
   <ppr52><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>405</LINE></ppr52>
@@ -400,8 +409,8 @@
   <ppr111><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>318</LINE></ppr111>
   <ppr120><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>326</LINE></ppr120>
   <ppr121><FILE>C:\Users\user\Project\PowerBp\Button2.asm</FILE><LINE>337</LINE></ppr121>
-  <showClockDisableHour><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>956</LINE></showClockDisableHour>
-  <showClockDisableMin><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>972</LINE></showClockDisableMin>
+  <showClockDisableHour><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1022</LINE></showClockDisableHour>
+  <showClockDisableMin><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1038</LINE></showClockDisableMin>
   <prBlinkDisplayLoad><FILE>C:\Users\user\Project\PowerBp\BlinkDisplay.asm</FILE><LINE>7</LINE></prBlinkDisplayLoad>
   <prBlinkDisplayUnLoad><FILE>C:\Users\user\Project\PowerBp\BlinkDisplay.asm</FILE><LINE>16</LINE></prBlinkDisplayUnLoad>
   <savePowerSetting><FILE>C:\Users\user\Project\PowerBp\Eeprom.asm</FILE><LINE>113</LINE></savePowerSetting>
@@ -439,9 +448,9 @@
   <pr3_130><FILE>C:\Users\user\Project\PowerBp\Button3.asm</FILE><LINE>119</LINE></pr3_130>
   <pr3_131><FILE>C:\Users\user\Project\PowerBp\Button3.asm</FILE><LINE>127</LINE></pr3_131>
   <pr3_255><FILE>C:\Users\user\Project\PowerBp\Button3.asm</FILE><LINE>185</LINE></pr3_255>
-  <onOffPower><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1017</LINE></onOffPower>
+  <onOffPower><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1083</LINE></onOffPower>
   <prBuzzerUnload><FILE>C:\Users\user\Project\PowerBp\Buzzer.asm</FILE><LINE>17</LINE></prBuzzerUnload>
-  <powerOn><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>812</LINE></powerOn>
+  <powerOn><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>878</LINE></powerOn>
   <prDisplayInit><FILE>C:\Users\user\Project\PowerBp\Display.asm</FILE><LINE>2</LINE></prDisplayInit>
   <prDisplayIsLoad><FILE>C:\Users\user\Project\PowerBp\Display.asm</FILE><LINE>4</LINE></prDisplayIsLoad>
   <prDisplayInc><FILE>C:\Users\user\Project\PowerBp\Display.asm</FILE><LINE>12</LINE></prDisplayInc>
@@ -458,7 +467,7 @@
   <outPortB><FILE>C:\Users\user\Project\PowerBp\Display.asm</FILE><LINE>67</LINE></outPortB>
   <EERead><FILE>C:\Users\user\Project\PowerBp\Eeprom.asm</FILE><LINE>246</LINE></EERead>
   <LoadNextSegment><FILE>C:\Users\user\Project\PowerBp\Eeprom.asm</FILE><LINE>220</LINE></LoadNextSegment>
-  <onOffPowerCheck><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1019</LINE></onOffPowerCheck>
+  <onOffPowerCheck><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1085</LINE></onOffPowerCheck>
   <EEWrite><FILE>C:\Users\user\Project\PowerBp\Eeprom.asm</FILE><LINE>233</LINE></EEWrite>
   <WriteNextSegment><FILE>C:\Users\user\Project\PowerBp\Eeprom.asm</FILE><LINE>226</LINE></WriteNextSegment>
   <toDigit><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>2</LINE></toDigit>
@@ -535,40 +544,46 @@
   <checkPrTimer><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>676</LINE></checkPrTimer>
   <checkPrTimerRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>681</LINE></checkPrTimerRet>
   <checkPrTimerNext0><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>683</LINE></checkPrTimerNext0>
-  <powerOff><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>819</LINE></powerOff>
-  <Hz10Actions><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>699</LINE></Hz10Actions>
-  <Hz10ActionsRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>706</LINE></Hz10ActionsRet>
-  <secActions><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>710</LINE></secActions>
-  <incSecClock><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>849</LINE></incSecClock>
-  <incRealClock><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>716</LINE></incRealClock>
-  <incRealClockNext0><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>723</LINE></incRealClockNext0>
-  <incRealClockRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>747</LINE></incRealClockRet>
-  <incRealClockNext1><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>732</LINE></incRealClockNext1>
-  <incRealClockRetAlarm><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>745</LINE></incRealClockRetAlarm>
-  <giveShortSignal><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1058</LINE></giveShortSignal>
-  <incRealClockNext2><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>742</LINE></incRealClockNext2>
-  <checkAlarmRealClock><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>750</LINE></checkAlarmRealClock>
-  <checkAlarmRealClockOff><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>782</LINE></checkAlarmRealClockOff>
-  <checkAlarmRealClockOn1><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>754</LINE></checkAlarmRealClockOn1>
-  <checkAlarmRealClockOn2><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>768</LINE></checkAlarmRealClockOn2>
-  <checkAlarmRealClockRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>809</LINE></checkAlarmRealClockRet>
-  <checkAlarmRealClockOff2><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>796</LINE></checkAlarmRealClockOff2>
-  <incRealTimeMinRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>835</LINE></incRealTimeMinRet>
-  <incRealTimeHourRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>845</LINE></incRealTimeHourRet>
-  <incSecClockNext0><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>856</LINE></incSecClockNext0>
-  <incSecClockRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>877</LINE></incSecClockRet>
-  <incSecClockNext1><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>865</LINE></incSecClockNext1>
-  <incSecClockNext2><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>874</LINE></incSecClockNext2>
-  <updateRealClock><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>880</LINE></updateRealClock>
-  <Show2DigitTime><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>901</LINE></Show2DigitTime>
-  <updateClock><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>888</LINE></updateClock>
-  <showClockNext0><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>895</LINE></showClockNext0>
-  <incClockDisableHourNULL><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>992</LINE></incClockDisableHourNULL>
-  <incClockDisableHourRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>994</LINE></incClockDisableHourRet>
-  <incClockDisableMinNULL><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1004</LINE></incClockDisableMinNULL>
-  <incClockDisableMinRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1006</LINE></incClockDisableMinRet>
-  <onOffPowerOFF><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1025</LINE></onOffPowerOFF>
-  <onOffPowerOn><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1022</LINE></onOffPowerOn>
+  <powerOff><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>885</LINE></powerOff>
+  <handleCurrentPower><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>699</LINE></handleCurrentPower>
+  <handleCurentPowerAdd><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>731</LINE></handleCurentPowerAdd>
+  <handleCurentPowerCheck><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>704</LINE></handleCurentPowerCheck>
+  <handleCurentPowerCheckRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>728</LINE></handleCurentPowerCheckRet>
+  <Hz1000ActionsInc><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>745</LINE></Hz1000ActionsInc>
+  <Hz1000ActionsClear><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>756</LINE></Hz1000ActionsClear>
+  <Hz1000Actions><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>762</LINE></Hz1000Actions>
+  <Hz1000ActionsRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>773</LINE></Hz1000ActionsRet>
+  <secActions><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>776</LINE></secActions>
+  <incSecClock><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>915</LINE></incSecClock>
+  <incRealClock><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>782</LINE></incRealClock>
+  <incRealClockNext0><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>789</LINE></incRealClockNext0>
+  <incRealClockRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>813</LINE></incRealClockRet>
+  <incRealClockNext1><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>798</LINE></incRealClockNext1>
+  <incRealClockRetAlarm><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>811</LINE></incRealClockRetAlarm>
+  <giveShortSignal><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1124</LINE></giveShortSignal>
+  <incRealClockNext2><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>808</LINE></incRealClockNext2>
+  <checkAlarmRealClock><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>816</LINE></checkAlarmRealClock>
+  <checkAlarmRealClockOff><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>848</LINE></checkAlarmRealClockOff>
+  <checkAlarmRealClockOn1><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>820</LINE></checkAlarmRealClockOn1>
+  <checkAlarmRealClockOn2><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>834</LINE></checkAlarmRealClockOn2>
+  <checkAlarmRealClockRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>875</LINE></checkAlarmRealClockRet>
+  <checkAlarmRealClockOff2><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>862</LINE></checkAlarmRealClockOff2>
+  <incRealTimeMinRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>901</LINE></incRealTimeMinRet>
+  <incRealTimeHourRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>911</LINE></incRealTimeHourRet>
+  <incSecClockNext0><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>922</LINE></incSecClockNext0>
+  <incSecClockRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>943</LINE></incSecClockRet>
+  <incSecClockNext1><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>931</LINE></incSecClockNext1>
+  <incSecClockNext2><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>940</LINE></incSecClockNext2>
+  <updateRealClock><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>946</LINE></updateRealClock>
+  <Show2DigitTime><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>967</LINE></Show2DigitTime>
+  <updateClock><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>954</LINE></updateClock>
+  <showClockNext0><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>961</LINE></showClockNext0>
+  <incClockDisableHourNULL><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1058</LINE></incClockDisableHourNULL>
+  <incClockDisableHourRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1060</LINE></incClockDisableHourRet>
+  <incClockDisableMinNULL><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1070</LINE></incClockDisableMinNULL>
+  <incClockDisableMinRet><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1072</LINE></incClockDisableMinRet>
+  <onOffPowerOFF><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1091</LINE></onOffPowerOFF>
+  <onOffPowerOn><FILE>C:\Users\user\Project\PowerBp\Function.asm</FILE><LINE>1088</LINE></onOffPowerOn>
   <prBuzzerLoad><FILE>C:\Users\user\Project\PowerBp\Buzzer.asm</FILE><LINE>8</LINE></prBuzzerLoad>
   <prSmallPwmInit><FILE>C:\Users\user\Project\PowerBp\SmallPwm.asm</FILE><LINE>2</LINE></prSmallPwmInit>
   <prSmallPwmInc><FILE>C:\Users\user\Project\PowerBp\SmallPwm.asm</FILE><LINE>9</LINE></prSmallPwmInc>
@@ -596,12 +611,12 @@
   <prRealClockTimeCheck><FILE>C:\Users\user\Project\PowerBp\RealClock.asm</FILE><LINE>14</LINE></prRealClockTimeCheck>
   <prRealClockFunc><FILE>C:\Users\user\Project\PowerBp\RealClock.asm</FILE><LINE>21</LINE></prRealClockFunc>
   <prRealClockFuncEt><FILE>C:\Users\user\Project\PowerBp\RealClock.asm</FILE><LINE>33</LINE></prRealClockFuncEt>
-  <Run10Hz><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>11</LINE></Run10Hz>
+  <Run1000Hz><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>11</LINE></Run1000Hz>
   <Inc_All><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>46</LINE></Inc_All>
   <Check_All><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>57</LINE></Check_All>
   <Fuc_All><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>68</LINE></Fuc_All>
   <UnRun><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>28</LINE></UnRun>
-  <UnRun10Hz><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>40</LINE></UnRun10Hz>
+  <UnRun1000Hz><FILE>C:\Users\user\Project\PowerBp\Controller.asm</FILE><LINE>40</LINE></UnRun1000Hz>
   <prBuzzerInc><FILE>C:\Users\user\Project\PowerBp\Buzzer.asm</FILE><LINE>11</LINE></prBuzzerInc>
   <prBuzzerTimeCheck><FILE>C:\Users\user\Project\PowerBp\Buzzer.asm</FILE><LINE>14</LINE></prBuzzerTimeCheck>
   <prBuzzerFunc><FILE>C:\Users\user\Project\PowerBp\Buzzer.asm</FILE><LINE>26</LINE></prBuzzerFunc>

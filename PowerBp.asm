@@ -48,7 +48,7 @@ ANA_COMP:
 		reti
 
 TIM1_COMPA:
-		rcall EnRun10Hz	
+		rcall EnRun1000Hz	
 		reti
 TIM0_OVF:
 		rcall EnRun
@@ -84,11 +84,11 @@ Flush:
 		clr temp
 		out TCNT1H, temp
 		out TCNT1L, temp
-		ldi temp, high(18750)
+		ldi temp, high(1500)
 		out OCR1AH, temp
-		ldi temp, low(18750)
+		ldi temp, low(1500)
 		out OCR1AL, temp
-		ldi temp,0b00001011 ; /64		
+		ldi temp,0b00001010 ; /64		
 		out TCCR1B, temp
 
 		ldi R16,0
@@ -124,13 +124,16 @@ Flush:
 		rcall prRealClockLoad
 ;		rcall prBuzzerLoad
 
-		
+		ldi temp, 0b01100000
+		out ADMUX, temp
+		ldi temp, 0b10100111
+		out ADCSR, temp
 
 		sei
 		clr temp
 		sts varUniversalShowMemoryPower, temp
 		rcall loadPowerSetting
-		
+
 		rcall Run
 
 .include "SramVar.asm"

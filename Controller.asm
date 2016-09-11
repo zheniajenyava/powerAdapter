@@ -1,21 +1,21 @@
 Run:
 	lds temp, varBeginRunSystem
 	cpi temp, 1
-	BRNE Run10Hz
+	BRNE Run1000Hz
 ;	saveRegist
 	rcall Inc_All
 	rcall Check_All
 	rcall Fuc_All
 ;	loadRegist
 	rcall UnRun
-Run10Hz:
+Run1000Hz:
 	lds temp, varBeginRunSystem2
 	cpi temp, 1
 	BRNE Run
 ;	saveRegist		
-	rcall Hz10Actions
+	rcall Hz1000Actions
 ;	loadRegist
-	rcall UnRun10Hz		
+	rcall UnRun1000Hz		
 	rjmp Run
 
 EnRun:	
@@ -30,14 +30,14 @@ UnRun:
 	sts varBeginRunSystem, temp
 	ret
 
-EnRun10Hz:	
+EnRun1000Hz:	
 	sts varBeginRunDumpTempRegist, temp
 	ldi temp, 1
 	sts varBeginRunSystem2, temp
 	lds temp, varBeginRunDumpTempRegist
 	ret
 
-UnRun10Hz:		
+UnRun1000Hz:		
 	clr temp
 	sts varBeginRunSystem2, temp
 	ret

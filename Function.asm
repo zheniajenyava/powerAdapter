@@ -696,15 +696,81 @@ checkPrTimerNext0:
 		sts varTimerOnOff, temp
 		ret
 
-Hz10Actions:
-		lds prTemp0, varRealTimeDelimiter10Hz
-		inc prTemp0
-		cpi prTemp0, 10
-		BRLO Hz10ActionsRet		
-		rcall secActions
-		clr prTemp0
-Hz10ActionsRet:
-		sts varRealTimeDelimiter10Hz, prTemp0
+handleCurrentPower:
+		rcall handleCurentPowerAdd
+		rcall handleCurentPowerCheck
+		ret
+
+handleCurentPowerCheck:
+		lds prTemp0, varCurSumAdc0
+		lds prTemp1, varCurSumAdc1
+		lds prTemp2, varCurSumAdc2
+
+		lds prTemp3, varEndSumAdc0
+		lds prTemp4, varEndSumAdc1
+		lds servprTemp0, varEndSumAdc2
+
+		sub prTemp0, prTemp3
+		sbc prTemp1, prTemp4
+		sbc prTemp2, servprTemp0
+		brlo handleCurentPowerCheckRet
+		sts varCurSumAdc0, prTemp0
+		sts varCurSumAdc1, prTemp1
+		sts varCurSumAdc2, prTemp2
+		lds temp, varCurrentPower0
+		lds prTemp0, varCurrentPower1
+		ldi prTemp1, 1
+		clr prTemp2
+		add temp, prTemp1
+		adc prTemp0, prTemp2
+		sts varCurrentPower0, temp
+		sts varCurrentPower1, prTemp0		
+handleCurentPowerCheckRet:
+		ret
+
+handleCurentPowerAdd:
+		in temp, ADCH
+		lds prTemp0, varCurSumAdc0
+		add prTemp0, temp
+		sts varCurSumAdc0, prTemp0
+		clr temp
+		lds prTemp0, varCurSumAdc1
+		adc prTemp0, temp
+		sts varCurSumAdc1, prTemp0
+		lds prTemp0, varCurSumAdc2
+		adc prTemp0, temp
+		sts varCurSumAdc2, prTemp0
+		ret
+
+Hz1000ActionsInc:
+		lds temp, varRealTimeDelimiter1000Hz0
+		lds prTemp2, varRealTimeDelimiter1000Hz1
+		ldi prTemp0, 1
+		clr prTemp1
+		add temp, prTemp0
+		adc prTemp2, prTemp1
+		sts varRealTimeDelimiter1000Hz0, temp
+		sts varRealTimeDelimiter1000Hz1, prTemp2
+		ret
+
+Hz1000ActionsClear:
+		clr temp
+		sts varRealTimeDelimiter1000Hz0, temp
+		sts varRealTimeDelimiter1000Hz1, temp
+		ret
+
+Hz1000Actions:
+		rcall handleCurrentPower
+		rcall Hz1000ActionsInc
+		lds temp, varRealTimeDelimiter1000Hz0
+		cpi temp, 0b11101000
+		brne Hz1000ActionsRet
+		lds temp, varRealTimeDelimiter1000Hz1
+		cpi temp, 0b00000011
+		brne Hz1000ActionsRet
+		rcall Hz1000ActionsClear
+		rcall secActions		
+Hz1000ActionsRet:		
 		ret
 
 secActions:
