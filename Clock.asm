@@ -1,6 +1,6 @@
 .cseg
 prClockInit:
-		initPr 5,2,varClockStTime0,varClockStTime1
+		initPr 1,2,varClockStTime0,varClockStTime1
 
 prClockIsLoad:	
 		isLoadPr varClockSystem,prClockInitEt

@@ -691,11 +691,7 @@ checkPrTimerNext0:
 		lds prTemp0, varTimerSec
 		cpi prTemp0, 0
 		brne checkPrTimerRet
-		rcall prSmallPwmUnload
-		ldi prTemp3,0b00000000
-		ldi prTemp4,0b00000000
-		rcall revertPower
-		cbi PORTB,3
+		rcall powerOff
 		clr temp
 		sts varTimerOnOff, temp
 		ret
@@ -704,9 +700,9 @@ Hz10Actions:
 		lds prTemp0, varRealTimeDelimiter10Hz
 		inc prTemp0
 		cpi prTemp0, 10
-		BRLO Hz10ActionsRet
-		clr prTemp0
+		BRLO Hz10ActionsRet		
 		rcall secActions
+		clr prTemp0
 Hz10ActionsRet:
 		sts varRealTimeDelimiter10Hz, prTemp0
 		ret
@@ -1020,6 +1016,7 @@ returnMainMenu:
 
 onOffPower:
 		rcall incPrOnOff
+onOffPowerCheck:
 		cpi temp, 1
 		brne onOffPowerOFF
 onOffPowerOn:

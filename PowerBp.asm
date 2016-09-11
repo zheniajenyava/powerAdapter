@@ -123,10 +123,14 @@ Flush:
 		rcall prDisplayLoad
 		rcall prRealClockLoad
 ;		rcall prBuzzerLoad
+
 		
+
 		sei
-		ldi temp, 1
-		sts varPowerOff, temp
+		clr temp
+		sts varUniversalShowMemoryPower, temp
+		rcall loadPowerSetting
+		
 		rcall Run
 
 .include "SramVar.asm"

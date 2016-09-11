@@ -56,14 +56,14 @@ loadPowerSetting:
 		rcall LoadNextSegment
 		sts varTimerOnOff,temp		
 
-		rcall LoadNextSegment
-		sts varClockSec,temp	
+		;rcall LoadNextSegment
+		;sts varClockSec,temp	
 
-		rcall LoadNextSegment
-		sts varClockMin,temp
+		;rcall LoadNextSegment
+		;sts varClockMin,temp
 
-		rcall LoadNextSegment
-		sts varClockHour,temp
+		;rcall LoadNextSegment
+		;sts varClockHour,temp
 
 		rcall LoadNextSegment
 		sts varClockEnableHour1,temp
@@ -100,9 +100,12 @@ loadPowerSetting:
 
 		rcall LoadNextSegment
 		sts varClockDisableON2,temp
-			
-		rcall powerStatusUpdate	
-		rcall updateSmallPwmStatus
+
+		rcall LoadNextSegment
+		sts varPowerOff,temp			
+
+		lds temp, varPowerOff
+		rcall onOffPowerCheck
 
 		sei
 		ret
@@ -163,14 +166,14 @@ savePowerSetting:
 		lds temp,varTimerOnOff
 		rcall WriteNextSegment
 		
-		lds temp,varClockSec
-		rcall WriteNextSegment
+		;lds temp,varClockSec
+		;rcall WriteNextSegment
 		
-		lds temp,varClockMin
-		rcall WriteNextSegment
+		;lds temp,varClockMin
+		;rcall WriteNextSegment
 		
-		lds temp,varClockHour
-		rcall WriteNextSegment
+		;lds temp,varClockHour
+		;rcall WriteNextSegment
 		
 		lds temp,varClockEnableHour1
 		rcall WriteNextSegment
@@ -207,6 +210,9 @@ savePowerSetting:
 
 		lds temp,varClockDisableON2
 		rcall WriteNextSegment
+
+		lds temp,varPowerOff
+		rcall WriteNextSegment		
 		
 		sei		
 		ret
