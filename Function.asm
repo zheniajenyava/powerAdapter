@@ -453,7 +453,7 @@ setDel:
 		out OCR2,prTemp2
 		ret	
 
-showProcessStTime:
+showValueRegister:
 		ldi R21, 0
 		rcall toDigit
 
@@ -725,6 +725,14 @@ handleCurentPowerCheck:
 		adc prTemp0, prTemp2
 		sts varCurrentPower0, temp
 		sts varCurrentPower1, prTemp0		
+
+		ldi prTemp1, low(9999)
+		ldi prTemp2, high(9999)
+		sub temp, prTemp1
+		sbc prTemp0, prTemp2
+		brlo handleCurentPowerCheckRet
+		sts varCurrentPower0, temp
+		sts varCurrentPower1, prTemp0
 handleCurentPowerCheckRet:
 		ret
 
@@ -931,6 +939,7 @@ incSecClockNext0:
 incSecClockNext1:
 		clr temp
 		sts varClockMin, temp
+		rcall addHourTimeLife
 		lds temp, varClockHour
 		inc temp
 		cpi temp, 100
@@ -1062,6 +1071,18 @@ incClockDisableHourRet:
 		rcall showClockDisableHour
 		ret
 
+decClockDisableHour:
+		dec prTemp2
+		cpi prTemp2, 255
+		breq decClockDisableHourMAX
+		rjmp decClockDisableHourRet
+decClockDisableHourMAX:
+		ldi prTemp2, 23
+decClockDisableHourRet:
+		mov R20, prTemp2
+		rcall showClockDisableHour
+		ret
+
 incClockDisableMin:
 		inc prTemp2
 		cpi prTemp2, 60
@@ -1070,6 +1091,18 @@ incClockDisableMin:
 incClockDisableMinNULL:
 		clr prTemp2
 incClockDisableMinRet:
+		mov R20, prTemp2
+		rcall showClockDisableMin
+		ret
+
+decClockDisableMin:
+		dec prTemp2
+		cpi prTemp2, 255
+		breq decClockDisableMinMAX
+		rjmp decClockDisableMinRet
+decClockDisableMinMAX:
+		ldi prTemp2, 59
+decClockDisableMinRet:
 		mov R20, prTemp2
 		rcall showClockDisableMin
 		ret
@@ -1126,4 +1159,82 @@ giveShortSignal:
 		sts varBuzzerDurationEndTime0, temp
 		sts varBuzzerDurationEndTime1, temp
 		rcall prBuzzerLoad		
+		ret
+
+writeVarEndSumAdc:
+		ldi temp, 1
+		mov R0, temp
+		clr R1
+		ldi prTemp0, low(500)
+		ldi prTemp2, high(500)
+
+		lds temp, varEndSumAdc0
+		rcall WriteNextSegment
+
+		lds temp, varEndSumAdc1
+		rcall WriteNextSegment
+
+		lds temp, varEndSumAdc2
+		rcall WriteNextSegment
+				
+		ret
+
+loadCurrentVarEndSum:
+		ldi temp, 1
+		mov R0, temp
+		clr R1
+		ldi prTemp0, low(500)
+		ldi prTemp2, high(500)
+
+		rcall LoadNextSegment
+		sts varEndSumAdc0, temp
+
+		rcall LoadNextSegment
+		sts varEndSumAdc1, temp
+
+		rcall LoadNextSegment
+		sts varEndSumAdc2, temp
+		ret
+
+addHourTimeLife:
+		rcall addHourTimeLifePrepareEpAdr
+
+		rcall LoadNextSegment
+		mov prTemp0, temp
+
+		rcall LoadNextSegment
+		mov prTemp1, temp		
+
+		ldi prTemp2, 1
+		ldi prTemp3, 0
+
+		add prTemp0, prTemp2
+		adc prTemp1, prTemp3
+
+		rcall addHourTimeLifePrepareEpAdr
+
+		mov temp, prTemp0
+		rcall WriteNextSegment
+
+		mov temp, prTemp1
+		rcall WriteNextSegment	
+				
+		ret
+
+addHourTimeLifePrepareEpAdr:
+		ldi temp, 1
+		mov R0, temp
+		clr R1
+		ldi prTemp0, low(503)
+		ldi prTemp2, high(503)
+		ret
+
+resetBlinkDisplay:		
+		clr temp
+		sts varBlinkDisplayFlags, temp
+		sts varBlinkDisplayCurTime0, temp
+		sts varBlinkDisplayCurTime1, temp
+		LDS prTemp0, varBlinkDisplaySystem
+		andi prTemp0, 0b11111101
+		STS varBlinkDisplaySystem, prTemp0
 		ret

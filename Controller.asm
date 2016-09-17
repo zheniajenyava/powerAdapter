@@ -50,9 +50,10 @@ Inc_All:
 		rcall prDisplayInc
 		rcall prSmallPwmInc
 		rcall prBlinkDisplayInc
-		rcall prCLockInc
+		rcall prClockInc		
 		rcall prRealClockInc
 		rcall prBuzzerInc
+		rcall prCurrentSumInc
 		ret
 Check_All:
 		rcall prButton3TimeCheck
@@ -64,6 +65,7 @@ Check_All:
 		rcall prClockTimeCheck
 		rcall prRealClockTimeCheck
 		rcall prBuzzerTimeCheck
+		rcall prCurrentSumTimeCheck
 		ret
 Fuc_All:		
 		rcall prDisplayFunc
@@ -74,6 +76,7 @@ Fuc_All:
 		rcall prBlinkDisplayFunc
 		rcall prClockFunc
 		rcall prRealClockFunc
-		rcall prBuzzerFunc		
+		rcall prBuzzerFunc
+		rcall prCurrentSumFunc
 		ret
 

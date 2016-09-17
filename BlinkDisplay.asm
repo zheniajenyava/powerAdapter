@@ -27,7 +27,7 @@ prBlinkDisplayFunc:
 		STS varBlinkDisplayCurTime1,temp
 		LDS prTemp0, varBlinkDisplaySystem
 		andi prTemp0, 0b11111101
-		STS varBlinkDisplaySystem, prTemp0		
+		STS varBlinkDisplaySystem, prTemp0
 
 		lds temp, varBlinkDisplayFlags
 		lds prTemp0, varBlinkDisplaySegments

@@ -2,9 +2,6 @@
 prClockInit:
 		initPr 1,2,varClockStTime0,varClockStTime1
 
-prClockIsLoad:	
-		isLoadPr varClockSystem,prClockInitEt
-
 prClockLoad:
 		loadPr varClockSystem,prClockInit
 

@@ -1,16 +1,12 @@
 .cseg
 prButton1Init:
 		initPr 6,1,varButton1StTime0,varButton1StTime1
-	
-prButton1IsLoad:
-		isLoadPr varButton1System,prButton1InitEt
 
 prButton1Load:
 		loadPr varButton1System,prButton1Init
 
 prButton1Inc:
 		incPr varButton1System,prButton1IncEt,varButton1CurTime0,varButton1CurTime1
-
 
 prButton1TimeCheck:
 		timeCheckPr varButton1System,prButton1TimeCheckEt,varButton1StTime0,varButton1StTime1,varButton1CurTime0,varButton1CurTime1
@@ -46,8 +42,9 @@ prButton1UnPress:
 		rjmp button1Start	
 		SBIS PINB,4
 		rjmp prButton1Exit
-		;rcall Pause		
+		;rcall Pause			
 button1Start:
+		rcall resetBlinkDisplay
 		clr prTemp0
 		sts varButton1Status, prTemp0
 		lds temp, positionMenu
@@ -60,7 +57,7 @@ button1Start:
 		cpi temp, 3
 		breq p3
 		cpi temp, 4
-		breq p4
+		breq p4		
 		rjmp p02
 p0:
 		ldi temp,1
@@ -81,15 +78,15 @@ p2:
 		lds R20, varPowerOff
 		rcall showOnOff				
 		rjmp p01
-p3:
-		rjmp p0
+p3:		
 		ldi temp,4
 		sts positionMenu, temp
+		rcall prCurrentSumLoad
 		rjmp p01
 p4:
-		ldi temp,0
-		sts positionMenu, temp
-		rjmp p01
+		rcall prCurrentSumUnLoad		
+		rjmp p0
+
 p02:
 		cpi temp, 21
 		breq p21
@@ -153,6 +150,8 @@ p02:
 		breq p102
 		cpi temp, 110
 		breq p110
+		cpi temp, 130
+		breq p130
 
 		rjmp pNextPart
 p21:
@@ -216,8 +215,7 @@ p101:
 p102:
 		rjmp pr102
 p110:
-		rjmp pr110
-		
+		rjmp pr110		
 
 pNextPart:
 		cpi temp, 111
@@ -234,6 +232,12 @@ pNextPart:
 		breq p130
 		cpi temp, 131
 		breq p131
+		cpi temp, 140
+		breq p140
+		cpi temp, 141
+		breq p141
+		cpi temp, 142
+		breq p142
 
 		rjmp p01
 
@@ -251,10 +255,37 @@ p130:
 		rjmp pr130
 p131:
 		rjmp pr131
+p140:
+		rjmp pr140
+p141:
+		rjmp pr141
+p142:
+		rjmp pr142
 
 		rjmp p01
 
-pr131:		
+pr140:
+		lds R20, varEndSumAdc0
+		inc R20
+		sts varEndSumAdc0, R20
+		rcall showValueRegister		
+		rjmp p01
+
+pr141:
+		lds R20, varEndSumAdc1
+		inc R20
+		sts varEndSumAdc1, R20
+		rcall showValueRegister		
+		rjmp p01
+
+pr142:
+		lds R20, varEndSumAdc2
+		inc R20
+		sts varEndSumAdc2, R20
+		rcall showValueRegister		
+		rjmp p01
+
+pr131:
 		rcall incRealTimeMin		
 		rjmp p01
 
@@ -417,20 +448,20 @@ pr52:
 		inc R20
 		sts varSmallPwmStTime2, R20
 		rcall updateSmallPwmStatus
-		rcall showProcessStTime		
+		rcall showValueRegister		
 		rjmp p01
 pr51:
 		lds R20, varSmallPwmStTime1
 		inc R20
 		sts varSmallPwmStTime1, R20
-		rcall showProcessStTime
+		rcall showValueRegister
 		rcall updateSmallPwmStatus
 		rjmp p01
 pr50:
 		lds R20, varSmallPwmStTime0
 		inc R20
 		sts varSmallPwmStTime0, R20
-		rcall showProcessStTime
+		rcall showValueRegister
 		rcall updateSmallPwmStatus
 		rjmp p01
 pr43:
@@ -468,10 +499,23 @@ pr41:
 		rcall showPwnDeep
 		rcall powerStatusUpdate
 		rjmp p01
-pr29:
+pr29:			; _A-4
 		ldi temp,30
-		sts positionMenu, temp
-		
+		sts positionMenu, temp		
+		ldi prTemp1, 0b00001000
+		sts varProcessDataDigit1D, prTemp1
+		ldi prTemp1, 0b00110111
+		sts varProcessDataDigit2D, prTemp1		
+		ldi prTemp1, 0b00000001
+		sts varProcessDataDigit2B, prTemp1		
+		clr prTemp1
+		sts varProcessDataDigit3D, prTemp1
+		ldi prTemp1, 0b00000001
+		sts varProcessDataDigit3B, prTemp1
+		ldi prTemp1, 0b00100110
+		sts varProcessDataDigit4D, prTemp1
+		ldi prTemp1, 0b00000001
+		sts varProcessDataDigit4B, prTemp1
 		rjmp p01
 
 pr30:		
@@ -484,7 +528,7 @@ pr21:
 		sts varProcessDataDigit2D, prTemp1
 		ldi prTemp1, 0b00110110
 		sts varProcessDataDigit3D, prTemp1
-		sts varProcessDataDigit4D, prTemp1
+		sts varProcessDataDigit4D, prTemp1		
 		ldi prTemp1, 0b00000001
 		sts varProcessDataDigit3B, prTemp1
 		sts varProcessDataDigit4B, prTemp1

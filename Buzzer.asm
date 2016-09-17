@@ -2,9 +2,6 @@
 prBuzzerInit:
 		initPr 2,0,varBuzzerStTime0,varBuzzerStTime1
 
-prBuzzerIsLoad:	
-		isLoadPr varBuzzerSystem,prBuzzerInitEt
-
 prBuzzerLoad:
 		loadPr varBuzzerSystem,prBuzzerInit
 

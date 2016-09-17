@@ -2,9 +2,6 @@
 prButton2Init:
 		initPr 6,1,varButton2StTime0,varButton2StTime1
 
-prButton2IsLoad:
-		isLoadPr varButton2System,prButton2InitEt
-
 prButton2Load:
 		loadPr varButton2System,prButton2Init
 
@@ -47,9 +44,9 @@ prButton2Press:
 prButton2UnPress:		
 		SBIS PINB,5
 		rjmp prButton2Exit
+		rcall resetBlinkDisplay
 		clr prTemp0
 		sts varButton2Status, prTemp0
-
 		lds temp, positionMenu
 		cpi temp, 1
 		breq pp1
@@ -69,6 +66,8 @@ prButton2UnPress:
 		breq pp28
 		cpi temp, 29
 		breq pp29
+		cpi temp, 30
+		breq pp30
 		cpi temp, 41
 		breq pp41
 		cpi temp, 42
@@ -133,6 +132,8 @@ pp28:
 		rjmp ppr28
 pp29:
 		rjmp ppr29
+pp30:
+		rjmp ppr30
 pp41:
 		rjmp ppr41
 pp42:
@@ -190,6 +191,12 @@ ppNextPart:
 		breq pp121
 		cpi temp, 122
 		breq pp122
+		cpi temp, 140
+		breq pp140
+		cpi temp, 141
+		breq pp141
+		cpi temp, 142
+		breq pp142
 
 		rjmp pp01
 
@@ -203,6 +210,12 @@ pp121:
 		rjmp ppr121
 pp122:
 		rjmp returnMainMenu
+pp140:
+		rjmp ppr140
+pp141:
+		rjmp ppr141
+pp142:
+		rjmp ppr142
 
 		rjmp pp01
 
@@ -241,7 +254,7 @@ ppr27:
 		rcall prBlinkDisplayLoad
 		rjmp pp01
 
-ppr29:		
+ppr29:
 		ldi temp,120
 		sts positionMenu, temp
 		lds R20, varClockDisableHour2
@@ -251,6 +264,33 @@ ppr29:
 		ldi temp, 0b00110000
 		sts varBlinkDisplaySegments, temp
 		rcall prBlinkDisplayLoad
+		rjmp pp01
+
+ppr30:
+		ldi temp,140
+		sts positionMenu, temp
+		lds R20, varEndSumAdc0
+		rcall showValueRegister		
+		rjmp pp01
+
+ppr140:
+		ldi temp,141
+		sts positionMenu, temp
+		lds R20, varEndSumAdc1
+		rcall showValueRegister		
+		rjmp pp01
+
+ppr141:
+		ldi temp,142
+		sts positionMenu, temp
+		lds R20, varEndSumAdc2
+		rcall showValueRegister		
+		rjmp pp01
+
+ppr142:
+		rcall writeVarEndSumAdc
+		rcall loadCurrentVarEndSum
+		rcall returnMainMenu		
 		rjmp pp01
 
 ppr28:		
@@ -415,7 +455,7 @@ ppr51:
 		ldi temp,52
 		sts positionMenu, temp
 		lds R20, varSmallPwmStTime2
-		rcall showProcessStTime
+		rcall showValueRegister
 		rcall updateSmallPwmStatus
 		;rcall prSmallPwmLoad
 		rjmp pp01
@@ -424,7 +464,7 @@ ppr50:
 		ldi temp,51
 		sts positionMenu, temp
 		lds R20, varSmallPwmStTime1
-		rcall showProcessStTime
+		rcall showValueRegister
 		rcall updateSmallPwmStatus
 		;rcall prSmallPwmLoad
 		rjmp pp01
@@ -435,7 +475,7 @@ ppr22:
 		ldi temp, 1
 		sts varSmallPwmOnOff, temp
 		lds R20, varSmallPwmStTime0
-		rcall showProcessStTime
+		rcall showValueRegister
 		;rcall prSmallPwmLoad
 		rcall updateSmallPwmStatus
 		rjmp pp01
@@ -468,6 +508,9 @@ ppr1:
 		sts varProcessDataDigit4B, prTemp1
 		ldi prTemp1, 0b00110110
 		sts varProcessDataDigit4D, prTemp1
+		clr prTemp1
+		sts varProcessDataDigit1B, prTemp1
+		sts varProcessDataDigit2B, prTemp1
 		rjmp pp01
 
 ppr21:

@@ -2,9 +2,6 @@
 prRealClockInit:
 		initPr 7,2,varRealClockStTime0,varRealClockStTime1
 
-prRealClockIsLoad:	
-		isLoadPr varRealClockSystem,prRealClockInitEt
-
 prRealClockLoad:
 		loadPr varRealClockSystem,prRealClockInit
 

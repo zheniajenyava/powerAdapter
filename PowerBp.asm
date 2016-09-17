@@ -108,9 +108,9 @@ Flush:
 		ldi temp, 0b00111111
 		out PORTD,temp
 
-		ldi temp, 0b11111111
+		ldi temp, 0b11111110
 		out DDRC, temp
-		ldi temp, 0b11111101
+		ldi temp, 0b11111100
 		out PORTC,  temp		
 
 		; comporator
@@ -122,17 +122,19 @@ Flush:
 		rcall prButton1Load
 		rcall prDisplayLoad
 		rcall prRealClockLoad
+		;rcall prCurrentSumLoad
 ;		rcall prBuzzerLoad
 
 		ldi temp, 0b01100000
 		out ADMUX, temp
-		ldi temp, 0b10100111
+		ldi temp, 0b11100111
 		out ADCSR, temp
 
 		sei
 		clr temp
 		sts varUniversalShowMemoryPower, temp
 		rcall loadPowerSetting
+		rcall loadCurrentVarEndSum
 
 		rcall Run
 
@@ -149,4 +151,5 @@ Flush:
 .include "RealClock.asm"
 .include "Controller.asm"
 .include "Buzzer.asm"
+.include "CurrentSum.asm"
 

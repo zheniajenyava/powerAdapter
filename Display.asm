@@ -1,10 +1,10 @@
 .cseg
 prDisplayInit:
 initPr 1,0,varDisplayStTime0,varDisplayStTime1
-prDisplayIsLoad:
-		ldi temp, 1
-		sts varSegmentDisplay, temp
-		isLoadPr varDisplaySystem,prDisplayInitEt
+;prDisplayIsLoad:
+;		ldi temp, 1
+;		sts varSegmentDisplay, temp
+;		isLoadPr varDisplaySystem,prDisplayInitEt
 
 prDisplayLoad:
 		loadPr varDisplaySystem,prDisplayInit
@@ -71,10 +71,11 @@ outPortB:
 
 		in prTemp4, PORTB
 		andi prTemp4, 0b11111010
-		or prTemp4, prTemp1
-		lds temp, varBlinkDisplayFlags		
+		or prTemp4, prTemp1		
+		lds temp, varBlinkDisplayFlags	
 		and temp, prTemp3
 		eor prTemp3, temp
+outPortBexit:
 		out PORTD, prTemp0
 		out PORTB, prTemp4
 		out PORTC, prTemp3
